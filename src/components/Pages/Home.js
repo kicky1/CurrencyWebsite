@@ -11,7 +11,7 @@ class Home extends Component {
                     title = "strona służąca do sprawdzania kursów walut"
                     subtitle = "Witaj"
                     buttonText = "Waluty"
-                    link="/services"
+                    link="/currency"
                     showButton={true}
                     image={image}
 
