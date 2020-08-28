@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Header from '../Common/Header';
-import image from '../assets/img/header-bg.jpg';
+import image from '../assets/img/header.jpg';
 
 // Re-usable components
 
@@ -9,21 +9,21 @@ import Team from '../Common/Team';
 
 
 class Home extends Component {
-    
-    render(){
+
+    render() {
         return (
             <div>
                 <Header
-                    title = "strona służąca do sprawdzania kursów walut"
-                    subtitle = "Witaj"
-                    buttonText = "Waluty"
+                    title="strona służąca do sprawdzania kursów walut"
+                    subtitle="Witaj"
+                    buttonText="Waluty"
                     link="/currency"
                     showButton={true}
                     image={image}
 
                 />
-                <Timelane/>
-                <Team/>
+                <Timelane />
+                <Team />
             </div>
         )
     }

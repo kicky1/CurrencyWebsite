@@ -64,24 +64,14 @@ class Converter extends Component {
     );
   };
   render() {
-    const { currencies, base, amount, convertTo, result, date} = this.state;
+    const { currencies, base, amount, convertTo, result, date } = this.state;
     return (
       <div className="container my-5">
         <div className="row">
           <div className="col-lg-6 mx-auto">
             <div className="card card-body">
-              <h5>
-                {amount} {base} is equevalent to 
-              </h5>
-              <h2>
-                {amount === ""
-                  ? "0"
-                  : result === null
-                  ? "Calculating..."
-                  : result}{" "}
-                {convertTo}
-              </h2>
-              <p>As of {amount === "" ? "" : date === null ? "" : date}</p>
+              <h5>Data pobrania danych : {amount === "" ? "" : date === null ? "" : date}</h5>
+              <br />
               <div className="row">
                 <div className="col-lg-10">
                   <form className="form-inline mb-4">
@@ -95,7 +85,7 @@ class Converter extends Component {
                       name="base"
                       value={base}
                       onChange={this.handleSelect}
-                      className="form-control form-control-lg"
+                      className="form-control form-control-lg mx-3"
                     >
                       {currencies.map(currency => (
                         <option key={currency} value={currency}>
@@ -112,8 +102,8 @@ class Converter extends Component {
                         amount === ""
                           ? "0"
                           : result === null
-                          ? "Calculating..."
-                          : result
+                            ? "Calculating..."
+                            : result
                       }
                       className="form-control form-control-lg mx-3"
                     />
@@ -121,7 +111,7 @@ class Converter extends Component {
                       name="convertTo"
                       value={convertTo}
                       onChange={this.handleSelect}
-                      className="form-control form-control-lg"
+                      className="form-control form-control-lg mx-3"
                     >
                       {currencies.map(currency => (
                         <option key={currency} value={currency}>
