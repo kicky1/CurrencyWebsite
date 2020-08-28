@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import Header from '../Common/Header';
 import image from '../assets/img/header-bg.jpg';
-import CurrencySite from '../Common/CurrencySite';
+import Services from '../Common/Services';
 
 
-class Currency extends Component {
+class Services extends Component {
     render(){
         return(
             <div>
@@ -15,11 +15,11 @@ class Currency extends Component {
                     showButton={false}
                     image={image}
                 />
-                <CurrencySite/>
+                <Services/>
             </div>
         )
     }
 
 }
 
-export default Currency;
+export default Services;

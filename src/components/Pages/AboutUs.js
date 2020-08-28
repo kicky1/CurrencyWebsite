@@ -1,25 +1,25 @@
 import React, {Component} from 'react';
 import Header from '../Common/Header';
 import image from '../assets/img/header-bg.jpg';
-import CurrencySite from '../Common/CurrencySite';
+import Portfolio from '../Common/Portfolio';
 
 
-class Currency extends Component {
+class AboutUs extends Component {
     render(){
         return(
             <div>
                 <Header
-                    title = "Notowania walut dostępne w systemie transakcyjnymt"
-                    subtitle = "Kursy walut"
+                    title = "Nasza firma funkcjonuje od wielu lat"
+                    subtitle = "Dokonania"
                     buttonText = "Odkryj"
                     showButton={false}
                     image={image}
                 />
-                <CurrencySite/>
+                <Portfolio/>        
             </div>
         )
     }
 
 }
 
-export default Currency;
+export default AboutUs;

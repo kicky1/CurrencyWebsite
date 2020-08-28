@@ -2,6 +2,12 @@ import React, {Component} from 'react';
 import Header from '../Common/Header';
 import image from '../assets/img/header-bg.jpg';
 
+// Re-usable components
+
+import Timelane from '../Common/Timelane';
+import Team from '../Common/Team';
+
+
 class Home extends Component {
     
     render(){
@@ -16,6 +22,8 @@ class Home extends Component {
                     image={image}
 
                 />
+                <Timelane/>
+                <Team/>
             </div>
         )
     }
