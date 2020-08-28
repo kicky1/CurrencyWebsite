@@ -1,11 +1,10 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PageWrapper from './components/PageWrapper';
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 // Pages
 import Home from './components/Pages/Home';
 import Currency from './components/Pages/Currency';
-import AboutUs from './components/Pages/AboutUs';
 import Converty from './components/Pages/Converty';
 
 class App extends Component {
@@ -14,23 +13,19 @@ class App extends Component {
       <div>
         <Router>
           <PageWrapper>
-              <Route
-                exact={true}
-                path = "/"
-                component = {Home}
-              />
-              <Route
-                path = "/currency"
-                component = {Currency}
-              />
-              <Route
-                path = "/converty"
-                component = {Converty}
-              />
-              <Route
-                path = "/aboutus"
-                component = {AboutUs}
-              />
+            <Route
+              exact={true}
+              path="/"
+              component={Home}
+            />
+            <Route
+              path="/currency"
+              component={Currency}
+            />
+            <Route
+              path="/converty"
+              component={Converty}
+            />
 
           </PageWrapper>
         </Router>

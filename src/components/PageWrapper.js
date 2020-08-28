@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class PageWrapper extends Component {
-    render(){
-        return(
+    render() {
+        return (
             <div>
                 <nav className="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
                     <div className="container">
@@ -17,7 +17,6 @@ class PageWrapper extends Component {
                                 <li className="nav-item"><Link className="nav-link js-scroll-trigger" to="/services">Chat</Link></li>
                                 <li className="nav-item"><Link className="nav-link js-scroll-trigger" to="/currency">Currency</Link></li>
                                 <li className="nav-item"><Link className="nav-link js-scroll-trigger" to="/converty">Converter</Link></li>
-                                <li className="nav-item"><Link className="nav-link js-scroll-trigger" to="/aboutus">AboutUs</Link></li>
                             </ul>
                         </div>
                     </div>

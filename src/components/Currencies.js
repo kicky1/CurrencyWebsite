@@ -3,7 +3,7 @@ import Button from '@material-ui/core/Button';
 
 class Currencies extends Component {
   state = {
-    currencies: ["CAD","HDK","GBP","NOK","USD", "AUD", "SGD", "CHF", "EUR", "PLN"],
+    currencies: ["CAD", "HDK", "GBP", "NOK", "USD", "AUD", "SGD", "CHF", "EUR", "PLN"],
     base: "USD",
     amount: "1",
     convertTo: "EUR",
@@ -87,55 +87,55 @@ class Currencies extends Component {
     );
   };
   render() {
-     
-    const { base, date, result2,result3,result4,result5,result6,result7,result8,result9,result10 } = this.state;
+
+    const { base, date, result2, result3, result4, result5, result6, result7, result8, result9, result10 } = this.state;
     return (
       <div className="container my-5">
         <div className="row">
           <div className="col-lg-6 mx-auto">
             <div className="card card-body">
-                <h5>
-                    1 {base} = {result2} PLN
+              <h5>
+                1 {base} = {result2} PLN
                 </h5>
             </div>
             <div className="card card-body">
-                <h5>
-                    1 {base} = {result3} CAD
+              <h5>
+                1 {base} = {result3} CAD
                 </h5>
             </div>
             <div className="card card-body">
-                <h5>
-                    1 {base} = {result5} GBP
+              <h5>
+                1 {base} = {result5} GBP
                 </h5>
             </div>
             <div className="card card-body">
-                <h5>
-                    1 {base} = {result6} NOK
+              <h5>
+                1 {base} = {result6} NOK
                 </h5>
             </div>
             <div className="card card-body">
-                <h5>
-                    1 {base} = {result7} AUD
+              <h5>
+                1 {base} = {result7} AUD
                 </h5>
             </div>
             <div className="card card-body">
-                <h5>
-                    1 {base} = {result8} SGD
+              <h5>
+                1 {base} = {result8} SGD
                 </h5>
             </div>
             <div className="card card-body">
-                <h5>
-                    1 {base} = {result9} CHF
+              <h5>
+                1 {base} = {result9} CHF
                 </h5>
             </div>
             <div className="card card-body">
-                <h5>
-                    1 {base} = {result10} EUR
+              <h5>
+                1 {base} = {result10} EUR
                 </h5>
             </div>
-            <div className = 'center'></div>
+            <div className='center'></div>
             <Button variant="contained"
-            onClick={this.handleInput}>Przycisk</Button>
+              onClick={this.handleInput}>Sprawdź</Button>
           </div>
         </div>
       </div>
