@@ -1,10 +1,10 @@
 # University project - "Kantor walut"
 
 ## Spis treści 
-* [Cel](#cel)
-* [Założenia](#założenia)
-* [Osiągnięcia](#osiągnięcia)
-* [Instalacja](#instalacja)
+* [Cel](#cel-)
+* [Założenia](#założenia-)
+* [Osiągnięcia](#osiągnięcia-)
+* [Instalacja](#instalacja-)
 
 ## Cel :
 Strona została założona jako projekt na przedmiot "Protokoły wymiany danych w systemach" 
