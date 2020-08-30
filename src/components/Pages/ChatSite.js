@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Header from '../Common/Header';
-import image from '../assets/img/header-bg.jpg';
+import image from '../assets/img/header5.jpg';
 import Chatter from '../Common/Chatter';
 
 
