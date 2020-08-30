@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Home from './components/Pages/Home';
 import Currency from './components/Pages/Currency';
 import Converty from './components/Pages/Converty';
+import ChatSite from './components/Pages/ChatSite';
 
 class App extends Component {
   render() {
@@ -25,6 +26,10 @@ class App extends Component {
             <Route
               path="/converty"
               component={Converty}
+            />
+            <Route
+              path = "/chat"
+              component = {ChatSite}
             />
 
           </PageWrapper>
