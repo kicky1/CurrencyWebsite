@@ -34,6 +34,9 @@ W celu włączenia projektu należy :
 git clone https://github.com/kicky1/CurrencyWebsite.git
 ```
 ### 2. Posiadać zainstalowanego Reacta oraz Node.js
+Wersja : 
+* npm >= 6.14.6
+* node >= v12.18.3
 ### 3. Pobrać npm dla obu folderów Chat_Server oraz CurrencyWebsite
 ```
 npm install
