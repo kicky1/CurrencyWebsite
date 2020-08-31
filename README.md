@@ -5,6 +5,7 @@
 * [Założenia](#założenia-)
 * [Osiągnięcia](#osiągnięcia-)
 * [Instalacja](#instalacja-)
+* [Opracowanie teoretyczne](#opracowanie teoretyczne-)
 
 ## Cel :
 Strona została założona jako projekt na przedmiot "Protokoły wymiany danych w systemach" 
@@ -45,3 +46,8 @@ npm install
 ```
 npm start
 ```
+## Opracowanie teoretyczne :
+Cały projekt opiera się na frameworku do języka JavaScript React.js oraz samym języku JavaScript. 
+* Kalkulator walutowy oraz kursy walut zostały oparte na danych generowanych z api http://exchangeratesapi.io/. Strona ta umożliwia otrzymywanie kursów walut z wybranych dni z przeszłości oraz na bieżąco generowanych codziennie w dni pracujące o 16:00 CET (https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html). 
+
+Do dyspozycji użytkownik posiada następujące waluty :
