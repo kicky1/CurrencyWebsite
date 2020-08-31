@@ -4,11 +4,10 @@ class Converter extends Component {
   state = {
     currencies: ["USD", "AUD", "SGD", "PHP", "EUR", "PLN"],
     base: "USD",
-    amount: "",
+    amount: "0",
     convertTo: "EUR",
     convertToPLN: "PLN",
     result: "",
-    date: ""
   };
 
   handleSelect = e => {
@@ -26,7 +25,6 @@ class Converter extends Component {
       {
         amount: e.target.value,
         result: null,
-        date: null
       },
       this.calculate
     );
@@ -40,11 +38,9 @@ class Converter extends Component {
       fetch(`https://api.exchangeratesapi.io/latest?base=${this.state.base}`)
         .then(res => res.json())
         .then(data => {
-          const date = data.date;
           const result = (data.rates[this.state.convertTo] * amount).toFixed(4);
           this.setState({
             result,
-            date,
           });
         });
     }
@@ -64,16 +60,15 @@ class Converter extends Component {
     );
   };
   render() {
-    const { currencies, base, amount, convertTo, result, date } = this.state;
+    const { currencies, base, amount, convertTo, result } = this.state;
     return (
       <div className="container my-5">
         <div className="row">
           <div className="col-lg-6 mx-auto">
             <div className="card card-body">
-              <h5>Data pobrania danych : {amount === "" ? "" : date === null ? "" : date}</h5>
-              <br />
               <div className="row">
                 <div className="col-lg-10">
+                  <br/>
                   <form className="form-inline mb-4">
                     <input
                       type="number"
