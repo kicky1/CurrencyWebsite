@@ -88,11 +88,12 @@ class Currencies extends Component {
   };
   render() {
 
-    const { base, result2, result3, result5, result6, result7, result8, result9, result10 } = this.state;
+    const { base, date, result2, result3, result5, result6, result7, result8, result9, result10 } = this.state;
     return (
       <div className="container my-5">
         <div className="row">
           <div className="col-lg-6 mx-auto">
+            <h3 className="section-heading text-uppercase">Data z dnia :  {date} </h3>
             <div className="card card-body">
               <h5>
                 1 {base} = {result2} PLN
