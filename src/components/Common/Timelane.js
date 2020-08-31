@@ -17,7 +17,7 @@ class Timelane extends Component {
                                 <div className="timeline-heading">
                                     <h4 className="subheading">Czat</h4>
                                 </div>
-                                <div className="timeline-body"><p className="text-muted">Zasada działania czatu polega na...</p></div>
+                                <div className="timeline-body"><p className="text-muted">Czat działa w oparciu o technologie WebSocket, która zapewnia komunikacje full-duplex. Aplikacja klienta wysyła wiadomość na serwer, który rozsyła ją do wszystkich użytkowników</p></div>
                             </div>
                         </li>
                         <li className="timeline-inverted">

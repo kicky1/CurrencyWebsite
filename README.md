@@ -97,6 +97,7 @@ W przypadku kalkulatora walutowego inaczej nazywanego konwerterem wszystko przeb
 
 ![](GitHubImages/czat.png)
 
+Czat działa w oparciu o technologie WebSocket, która zapewnia komunikacje full-duplex. Aplikacja działa w oparciu o serwer, do którego połączeni są wszyscy klienci. Wiadomość wysyłana przez klienta trafia na serwer gdzie transmitowana jest do wszytskich aktualnie połączonych klientów.
 
 ## Budowa strony
 
