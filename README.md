@@ -5,7 +5,7 @@
 * [Założenia](#założenia-)
 * [Osiągnięcia](#osiągnięcia-)
 * [Instalacja](#instalacja-)
-* [Opracowanie teoretyczne](#opracowanie teoretyczne-)
+* [Opracowanie teoretyczne](#opracowanie-teoretyczne-)
 
 ## Cel :
 Strona została założona jako projekt na przedmiot "Protokoły wymiany danych w systemach" 
@@ -50,4 +50,69 @@ npm start
 Cały projekt opiera się na frameworku do języka JavaScript React.js oraz samym języku JavaScript. 
 * Kalkulator walutowy oraz kursy walut zostały oparte na danych generowanych z api http://exchangeratesapi.io/. Strona ta umożliwia otrzymywanie kursów walut z wybranych dni z przeszłości oraz na bieżąco generowanych codziennie w dni pracujące o 16:00 CET (https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html). 
 
-Do dyspozycji użytkownik posiada następujące waluty :
+Do dyspozycji użytkownik posiada 32 waluty 
+
+### Kursy walut :
+
+Kursy wybrano dla dolara amerykańskiego
+
+![](GitHubImages/waluty.png)
+
+W przypadku kursów walut podjęto decyzję o stworzeniu stanu, który posiada wybrane waluty, walucie podstawowej, jej wartości, pozycji na którą zmieniamy oraz daty. :
+
+```
+  state = {
+    currencies: ["CAD", "HDK", "GBP", "NOK", "USD", "AUD", "SGD", "CHF", "EUR", "PLN"],
+    base: "USD",
+    amount: "1",
+    convertTo: "EUR",
+    convertToPLN: "PLN",
+    convertToCAD: "CAD",
+    convertToHDK: "HDK",
+    convertToGBP: "GBP",
+    convertToNOK: "NOK",
+    convertToAUD: "AUD",
+    convertToSGD: "SGD",
+    convertToCHF: "CHF",
+    convertToEUR: "EUR",
+    result: "",
+    date: ""
+  };
+```
+
+W renderze waluty zwracane są za pomocą trzech ustawnień stanu i funkcji `handleSelect`, `handleInput`, `handlSwap` oraz `calculate`.
+
+Główną rolę odgrywa `calculate`, ponieważ w niej wykorzystywane jest api oraz zwracane są kolejne result'y, czyli dane dotyczące kursu walut w stosunku do USD. Za pomocą ustawnia stanu `this.setState` wszystkie kursy zostają przypisane do odpowiednich miejsc w renderze strony.
+
+Cała strona Currencies.js odpowiedzialna jest za generowanie podstrony zawierającej tabelę z pobranymi wartościami strona ta jest wykorzystywana w pliku Currency.js a następnie wywoływana w App.js. Cały zamysł logiczny aplikacji opiera się na takiej budowie.
+
+### Kalkulator walutowy : 
+
+![](GitHubImages/konwerter.png)
+
+W przypadku kalkulatora walutowego inaczej nazywanego konwerterem wszystko przebiega w taki sam sposób jak przy pobieraniu kursów walut znacząca róznica polega na budowie `handleSelect` oraz `handleInput`dzięki, którym istnieje możliwość zmiany waluty.
+
+
+### Czat : 
+
+![](GitHubImages/czat.png)
+
+
+## Budowa strony
+
+Strona a zarazem aplikacja webowa została stworzona w Reactcie i starano się zachować dobre praktyki. Wszystkie strony i podstrony zostały rozdzielone na katalogi o nazwie `Common` oraz `Pages`. Dzięki czemu łątwiej zarządzać dwupoziomowością aplikacji. 
+
+### Pierwsza wartwa
+Pierwszą warstwą są pliki znajdujące się w folderze `Pages` :
+* ChatSite.js
+* Converty.js
+* Currency.js
+* Home.js
+Pliki te przekazywane są do App.js gdzie zostają wywołane, natomiast same posiadają inne wywołanie należace do drugiej warstwy.
+### Druga warstwa
+Są to pliki znajdujące się w folderze `Common`, służą one do renderowania strony i posiadają inne pliki, które również generują jak naprzykład w przypadku zespołu `TeamMember.js -> Team.js ->Home.js`.
+
+Oprócz tego na stronie wykorzystanow bibliotekę `Material-ui` zawierającą gotowe komponenty oraz `Bootstrap` w celu zachowania responsywności elementów.
+
+![](GitHubImages/responsywna.png)
+
