@@ -113,7 +113,6 @@ Pliki te przekazywane są do App.js gdzie zostają wywołane, natomiast same pos
 ### Druga warstwa
 Są to pliki znajdujące się w folderze `Common`, służą one do renderowania strony i posiadają inne pliki, które również generują jak naprzykład w przypadku zespołu `TeamMember.js -> Team.js ->Home.js`.
 
-Oprócz tego na stronie wykorzystanow bibliotekę `Material-ui` zawierającą gotowe komponenty oraz `Bootstrap` w celu zachowania responsywności elementów.
 
 ![](GitHubImages/responsywna.png)
 
